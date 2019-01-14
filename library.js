@@ -97,7 +97,7 @@ var uid = function() {
 var addTrack = function(name, artist, album) {
   var id = uid();
   library.tracks["t" + id] = {
-    id: id,
+    id: "t" + id,
     name: name,
     artist: artist,
     album: album
@@ -105,21 +105,21 @@ var addTrack = function(name, artist, album) {
   console.log(id);
   console.log(library.tracks);
 };
-addTrack();
+addTrack("Shape of You", "Ed Sheeran", "Divide");
 
 // adds a playlist to the library
 
 var addPlaylist = function(name) {
   var id = uid();
   library.playlists["p" + id] = {
-    id: id,
+    id: "p" + id,
     name: name,
     tracks: []
   };
   console.log(id);
   console.log(library.playlists);
 };
-addPlaylist();
+addPlaylist("Lo-Fi Hip-Hop");
 
 // STRETCH:
 // given a query string string, prints a list of tracks
